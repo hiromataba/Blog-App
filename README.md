@@ -1,24 +1,80 @@
-# README
+# Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
-Things you may want to cover:
+> Classic blog website
 
-* Ruby version
+Blog website that shows a list of posts and empower readers to interact with them by adding comments and liking posts.
 
-* System dependencies
+## Built With
 
-* Configuration
+- Ruby on Rails
+- PostgreSQL
 
-* Database creation
+## Getting Started
 
-* Database initialization
+To get a local copy up and running follow these simple example steps.
 
-* How to run the test suite
+### Prerequisites
 
-* Services (job queues, cache servers, search engines, etc.)
+- [Ruby](https://www.ruby-lang.org/en/)
+- [Rails](https://gorails.com/)
 
-* Deployment instructions
+### Setup
 
-* ...
+- Make sure you have Ruby on Rails set up properly on your computer
+- Clone or download this repo on your machine
+- Enter project directory
+
+### Development Database
+
+```sh
+# Create user
+sudo -u postgres createuser blog -s
+
+# Create the database
+rake db:create
+```
+
+### Install
+
+```sh
+bundle install
+```
+
+### Run
+
+```sh
+rails s
+```
+
+### Test
+
+```sh
+rake spec
+```
+
+👤 **Aganze Mataba Henri**
+
+- GitHub: [@hiromataba](https://github.com/hiromataba)
+- Twitter: [@twitterhandle](https://twitter.com/MatabaHiro)
+- LinkedIn: [Hiro Mataba](https://www.linkedin.com/in/hiro-mataba-1bb910209/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+
+## License
+
+[MIT](./LICENSE)
