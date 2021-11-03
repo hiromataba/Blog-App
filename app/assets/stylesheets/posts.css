@@ -1,0 +1,81 @@
+
+.post {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px 10px;
+  justify-content: flex-start;
+  border: 2px solid black;
+}
+
+.post h4 {
+  margin: 0;
+}
+
+.post p {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.see-all-post {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  margin: 10px;
+  height: 35px;
+  color: black;
+}
+
+.comment-user {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px 10px;
+  justify-content: flex-start;
+  border: 2px solid black;
+}
+
+.comment-user h4 {
+  margin: 0;
+}
+
+.pagination-btn {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  margin: 10px;
+  height: 35px;
+  color: black;
+}
+
+.pagination-btn button {
+  border: none;
+}
+
+.post-show {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px 10px;
+  justify-content: flex-start;
+  border: 2px solid black;
+}
+
+.post-show p {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.show-post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
