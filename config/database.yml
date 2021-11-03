@@ -79,8 +79,8 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
-  <<: *default
-  database: blogapp_production
-  username: blogapp
-  password: <%= ENV['BLOGAPP_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: blogapp_production
+#   username: blogapp
+#   password: <%= ENV['BLOGAPP_DATABASE_PASSWORD'] %>
