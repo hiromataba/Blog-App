@@ -54,7 +54,7 @@
   color: black;
 }
 
-.pagination-btn button{
+.pagination-btn button {
   border: none;
 }
 
@@ -73,7 +73,7 @@
   line-height: 20px;
 }
 
-.show-post-header{
+.show-post-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
