@@ -1,2 +1,4 @@
-<%= render 'users/user' %>
+
+<%= render :collection => @users, :partial => "users/user", 
+           :as => :user %>
 

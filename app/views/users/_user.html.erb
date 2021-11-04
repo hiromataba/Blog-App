@@ -1,5 +1,6 @@
-<% @users.each do |user| %>
-<article class="user">
+
+<%= link_to user do %>
+<article  class="user">
   <div class="user-img">
       <h1><%= user.photo %></h1>
   </div>
@@ -18,4 +19,5 @@
       </div>
   </div>
 </article>
-<% end %> 
+
+<% end %>

@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+users = User.create([{name: "Hiro", bio: "Text bio number one ", photo: "Hi"},{name: "Job", bio: "Text bio number two ", photo: "Jo"},{name: "Moise", bio: "Text bio number three ", photo: "Mo"}])
+
+users.each do |user|
+  index = 1
+  user.post.create([{title:"test post #{index}",text:"Test text index one"},{title:"test post #{index}",text:"Test text index two"},{title:"test post #{index}",text:"Test text index three"}])
+  index += 1
+end  
