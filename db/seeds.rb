@@ -10,6 +10,6 @@ users = User.create([{name: "Hiro", bio: "Text bio number one ", photo: "Hi"},{n
 
 users.each do |user|
   index = 1
-  user.post.create([{title:"test post #{index}",text:"Test text index one"},{title:"test post #{index}",text:"Test text index two"},{title:"test post #{index}",text:"Test text index three"}])
+  user.post.create([{title:"test post ",text:"Test text index one"},{title:"test post ",text:"Test text index two"},{title:"test post ",text:"Test text index three"}])
   index += 1
 end  

@@ -61,3 +61,7 @@ h4 {
   line-height: 30px;
   font-size: 16px;
 }
+
+.user-link {
+  text-decoration: none;
+}
