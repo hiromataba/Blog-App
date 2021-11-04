@@ -1,2 +1,4 @@
-<h1>Here is a list of posts for a given user index</h1>
+
+<%= render :collection => @users, :partial => "users/user", 
+           :as => :user %>
 
