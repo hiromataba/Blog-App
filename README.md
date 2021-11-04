@@ -35,9 +35,6 @@ To get a local copy up and running follow these simple example steps.
 # Create user
 sudo -u postgres createuser blog -s
 
-#Install webpacker
-rails webpacker:install
-
 # Create the database
 rake db:create
 
@@ -48,11 +45,22 @@ rake db:create
 
 ```sh
 bundle install
+
+#Install webpacker
+rails webpacker:install
+
 ```
 
 ### Run
 
 ```sh
+#run migration
+rails db:migrate
+
+#run seed
+rails db:seed
+
+#run the rails s
 rails s
 ```
 
