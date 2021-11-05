@@ -1,9 +1,9 @@
 class User < ApplicationRecord
-  has_many :likes
-  has_many :post
-  has_many :comments
+  has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
   def recent_posts(limit = 3)
-    post.last(limit)
+    posts.last(limit)
   end
 end
