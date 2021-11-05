@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   def index
     @user = User.find(params[:user_id])
     @posts = @user.recent_posts
@@ -12,9 +11,8 @@ class PostsController < ApplicationController
     @liked = @post.liked? current_user.id
   end
 
-  def new
-  end
-  
+  def new; end
+
   def create
     post = current_user.posts.new(post_params)
 
@@ -35,5 +33,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:data).permit(:title, :text)
   end
-
 end
