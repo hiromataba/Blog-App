@@ -21,5 +21,6 @@
 		5.times do |j|
 			Comment.create(text: "Comment ##{j}", post: post, user: user)
 		end
+		post.likes.create(user: user)
 	end
 end
