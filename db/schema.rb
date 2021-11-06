@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2021_10_30_112721) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "comments_counter", default: 0, null: false
-    t.integer "likes_counter"
+    t.integer "likes_counter", default: 0, null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2021_10_30_112721) do
     t.text "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "posts_counter"
+    t.integer "posts_counter", default: 0, null: false
   end
 
   add_foreign_key "comments", "posts"
