@@ -66,7 +66,7 @@ rails s
 ### Test
 
 ```sh
-rake spec
+rspec
 ```
 
 👤 **Aganze Mataba Henri**
