@@ -6,13 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.create([{name: "Hiro", bio: "Text bio number one ", photo: ""},{name: "Job", bio: "Text bio number two ", photo: ""},{name: "Moise", bio: "Text bio number three ", photo: ""},{name: "Caleb", bio: "Fullstack dev ", photo: ""}])
+# users = User.create([{name: "Hiro", bio: "Text bio number one ", photo: ""},{name: "Job", bio: "Text bio number two ", photo: ""},{name: "Moise", bio: "Text bio number three ", photo: ""},{name: "Caleb", bio: "Fullstack dev ", photo: ""}])
 
-users.each do |user|
-  index = 1
-  user.post.create([{title:"Cool post ",text:"Test text index #{post.id}"},{title:"Nice post ",text:"Test text index #{post.id}"},{title:"test post ",text:"Test text index #{post.id}"}])
-  index += 1
-end  
+# users.each do |user|
+#   index = 1
+#   user.post.create([{title:"Cool post ",text:"Test text index #{post.id}"},{title:"Nice post ",text:"Test text index #{post.id}"},{title:"test post ",text:"Test text index #{post.id}"}])
+#   index += 1
+# end  
 
 # 5.times do |i|
 # 	user = User.create(name: "User ##{i}", bio: "A bio.")
