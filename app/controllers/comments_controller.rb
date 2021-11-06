@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: %i[show edit update destroy]
-
   def create
     post = Post.find(params[:post_id])
     comment = post.comments.new(text: comment_params[:text], user: current_user)
