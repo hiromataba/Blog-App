@@ -1,23 +1,14 @@
-
-<%= link_to user, class: "user-link" do  %>
-<article  class="user">
-  <div class="user-img">
-      <h1><%= user.photo %></h1>
+<article class="media is-align-items-center">
+  <div class="media-left">
+    <figure class="image is-128x128">
+      <img src=<%= get_photo(user) %> alt="profile picture" >
+    </figure>
   </div>
-  <div>
-    
-  </div>
-  <div>
-    
-  </div>
+  <div class="media-content notification">
     <div class="content">
-      <div  class="user-name">
-        <h4><%= user.name %></h4>
-      </div>
-      <div  class="number-of-post">
-        <p>Number of post is: <%= user.post.length %></p>
-      </div>
+      <h4 class="title is-4"><%= user.name %></h4>
+      <p class="subtitle is-size-7"><%= t('joined', date: user.created_at.to_s(:nice_date)) %></p>
+      <p class="has-text-right is-size-7"><%= t('posts_counter', count: user.posts_counter)%></p>
+    </div>
   </div>
 </article>
-
-<% end %>

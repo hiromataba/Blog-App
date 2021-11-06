@@ -1,27 +1,22 @@
-<%= link_to post, class: "user-lnik" do %>
-<div class="post-show">
-  <div class="show-post-header">
-  <div>
-    <h4><%= @post.title %> #<%= @post.id %> by <%= @user.name%></h4>
+<div class="content">
+  <div class="post-header">
+    <div>
+      <p><%= t('post', id: @post.id) %> <%= t('by', name: @user.name) %></p>
+    </div>
+    <div>
+      <p class="is-size-7"><%= t('comments_counter', count: @post.comments_counter) %>, <%= t('likes_counter', count: @post.likes_counter) %></p>
+    </div>
   </div>
-  <div>
-    <h5>Comments: x , Likes: y</h5>
+  <p class="is-size-7 is-italic"><%= t('posted_on', date: @post.created_at.to_s(:nice_date)) %></p>
+  <div class="post-title-container">
+    <h1 class="title"><%= @post.title %></h1>
+    <% if @liked %>
+      <%= render partial: "unlike_post", post: @post %>
+    <% else %>
+      <%= render partial: "like_post", post: @post %>
+    <% end %>
   </div>
+  <p><%= @post.text %></p>
 </div>
-<p><%= @post.text %>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-<br>
-<br>
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-</p>
-</div>
-
-<div class="comment-user">
-  <h4><%= @user.name %>: Comment 1</h4>
-  <h4><%= @user.name %>: Comment 2</h4>
-  <h4><%= @user.name %>: Comment 3</h4>
-  <h4><%= @user.name %>: Comment 4</h4>
-  <h4><%= @user.name %>: Comment 5</h4>
-  <h4><%= @user.name %>: Comment 6</h4>
-</div>
-
-<% end %>
+<%= render partial: "new_comment", post: @post %>
+<%= render partial: "shared/comment", collection: @comments %>

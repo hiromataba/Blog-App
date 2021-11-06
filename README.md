@@ -8,10 +8,6 @@ Blog website that shows a list of posts and empower readers to interact with the
 
 ![blog](https://user-images.githubusercontent.com/75126481/140084166-430a9c0c-55f3-4d9e-9c85-aebd85784bf0.png)
 
-## Live demo
-
-[Live demo](https://hiro-blog-application.herokuapp.com/)
-
 ## Built With
 
 - Ruby on Rails

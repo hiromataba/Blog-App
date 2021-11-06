@@ -1,4 +1,8 @@
-
-<%= render :collection => @users, :partial => "users/user", 
-           :as => :user %>
-
+<%= render "header" %>
+<div class="list">
+  <% @users.each do |user| %>
+    <%= link_to user_path(user.id) do %>
+      <%= render partial: "user", object: user %>
+    <% end %>
+  <% end %>
+</div>

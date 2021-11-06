@@ -1,44 +1,10 @@
-<article class="user">
-  <div class="user-img">
-      <h1><%= @user.photo %></h1>
-  </div>
-  <div>
-    
-  </div>
-  <div>
-    
-  </div>
-    <div class="content">
-      <div  class="user-name">
-        <h4><%= @user.name %></h4>
-      </div>
-      <div  class="number-of-post">
-        <p>Number of post is: <%= @user.post.length %></p>
-      </div>
-  </div>
-</article>
-
-<% @posts.each do |post|%>
-  <div class="post">
-  <div>
-    <h4><%= post.title %> #<%= post.id %></h4>
-  </div>
-  <div>
-    <p><%= post.text %>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-  </div>
+<%= render partial: "users/user", object: @user %>
+<div class="list comments-list">
+  <% @posts.each do |post| %>
+    <div>
+    <%= render partial: "post", object: post %>
+    <%= render partial: "shared/comment", collection: post.recent_comments %>
+    </div>
+  <% end %>
 </div>
-  <div class="comment-user">
-    <h4><%= @user.name %>: Comment 1</h4>
-    <h4><%= @user.name %>: Comment 2</h4>
-    <h4><%= @user.name %>: Comment 3</h4>
-    <h4><%= @user.name %>: Comment 4</h4>
-  </div>
-<% end %>
-
-
-
-<div class="pagination-btn">
-  <button type="submit" >Pagination</button>
-</div>
-
-
+<button class="button is-small">Pagination</button>

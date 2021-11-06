@@ -1,36 +1,11 @@
 
-<article class="user">
-  <div class="user-img">
-      <h1><%= @user.photo %></h1>
-  </div>
-  <div>
-    
-  </div>
-  <div>
-    
-  </div>
-    <div class="content">
-      <div  class="user-name">
-        <h4><%= @user.name %></h4>
-      </div>
-      <div  class="number-of-post">
-        <p>Number of post is: <%= @user.post.length %></p>
-      </div>
-  </div>
-</article>
-
+  
+<%= render @user %>
 <% if @user.bio.present? %>
-	<div class="user-bio">
-	  <div>
-      <h5 class="bio-title">Bio</h5>
-    </div>
-	  <div>
-      <p class="bio"><%= @user.bio %></p>
-    </div>
+	<div class="mt-5 notification">
+	  <h5 class="title is-6">Bio</h5>
+	  <p class="is-6"><%= @user.bio %></p>
 	</div>
 <% end %>
-
-
 <%= render partial: "posts/post", collection: @posts %>
-
-<%= link_to "See all post", user_posts_path(@user.id), class: "see-all-post" %>
+<%= link_to "See all post", user_posts_path(@user.id), class: "button is-link is-small" %>
