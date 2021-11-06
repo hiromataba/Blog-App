@@ -1,5 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe '#update_counter' do
+    let(:user) { User.create(name: 'Barack') }
+    let(:post) { user.posts.create(title: 'Post', comments_counter: 0, likes_counter: 0) }
+
+    it 'updates the post counter' do
+      post.likes.create(user: user)
+      expect(post.likes_counter).to eq 1
+    end
+  end
 end
