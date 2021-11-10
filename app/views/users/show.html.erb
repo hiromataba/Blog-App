@@ -1,11 +1,30 @@
-
-  
-<%= render @user %>
-<% if @user.bio.present? %>
-	<div class="mt-5 notification">
-	  <h5 class="title is-6">Bio</h5>
-	  <p class="is-6"><%= @user.bio %></p>
-	</div>
+<div class="container my-3">
+  <div class="row">
+  <div class="col-3">
+  <%= image_tag @user[:photo], :size => "150x150", class:"rounded" %>
+  </div>
+  <div class="border rounded col-9 d-flex align-items-center justify-content-between">
+  <h3><%= @user[:name] %></h3>
+  <span>Number of posts:<%= @user[:postsCounter] %></span>
+  </div>
+  </div>
+</div>
+<div>
+<div class="container border rounded my-3">
+  <h4> Bio </h4>
+  <p><%= @user[:bio] %></p>
+  </div>
+</div>
+<% @posts.each do |post| %>
+<div class="container border rounded my-3">
+<h4> <%= post[:title]%> </h4>
+<p> <%= post[:text]%> </p>
+<div class="d-flex justify-content-end">
+<span>Comments: <%= post[:commentsCounter]%></span>
+<span>Likes: <%= post[:likesCounter]%></span>
+</div>
+</div>
 <% end %>
-<%= render partial: "posts/post", collection: @posts %>
-<%= link_to "See all post", user_posts_path(@user.id), class: "button is-link is-small" %>
+<div class=" container col-12 text-center">
+<%= link_to "See all posts", posts_path(@user.id), id: "see_all_#{@user.id}"%>
+</div>
