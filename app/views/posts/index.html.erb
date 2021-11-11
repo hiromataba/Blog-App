@@ -1,72 +1,10 @@
-<div class="container my-3">
-  <div class="row">
-  <div class="col-3">
-  <%= image_tag @user[:photo], :size => "150x150", class:"rounded" %>
-  </div>
-  <div class="border rounded col-9 d-flex align-items-center justify-content-between">
-  <h3><%= @user[:name] %></h3>
-  <span>Number of posts:<%= @user[:postsCounter] %></span>
-  </div>
-  </div>
+<%= render partial: "users/user", object: @user %>
+<div class="list comments-list">
+  <% @posts.each do |post| %>
+    <div>
+    <%= render partial: "post", object: post %>
+    <%= render partial: "shared/comment", collection: post.recent_comments %>
+    </div>
+  <% end %>
 </div>
-
-<div class="container my-3 rounded border">
-<%= form_with url: posts_path do |form| %>
-
-  <%= form.hidden_field :user_id, value: @user.id %>
-
-  <div class="my-2">
-    <%= form.label :title %><br>
-    <%= form.text_field :title, class:"form-control" %>
-  </div>
-
-  <div  class="my-2">
-    <%= form.label :text %><br>
-    <%= form.text_area :text, class:"form-control" %>
-  </div>
-
-  <div  class="my-2">
-    <%= form.submit class:'btn btn-primary' %>
-  </div>
-<% end %>
-</div>
-
-<% @posts.each do |post| %>
-<div class=" my-3">
-<div class="container border rounded my-1">
-<h4> <%= post[:title]%> </h4>
-<p> <%= post[:text]%> </p>
-<div class="d-flex justify-content-end">
-<span>Comments: <%= post[:commentsCounter]%></span>
-<span>Likes: <%= post[:likesCounter]%></span>
-</div>
-</div>
-
-<div class="container my-3 rounded border">
-  <%= form_with url: comments_path do |form| %>
-
-  <%= form.hidden_field :user_id, value: @user.id %>
-  <%= form.hidden_field :post_id, value: post.id%>
-
-  <div  class="my-2">
-    <%= form.label :text%>
-    <%= form.text_field :text, class:"form-control" %>
-  </div>
-
-  <div  class="my-2">
-    <%= form.submit class:'btn btn-primary' %>
-  </div>
-
-<% end %>
-</div>
-
-<div class="container rounder border">
-<% post.comments.each do |comment| %>
-<p><%= User.find_by(id: comment.user_id).name %>: <%= comment[:text] %></p>
-<% end %>
-</div>
-</div>
-<% end %>
-<div class=" container col-12 text-center">
-<button class="border rounded">Pagination</button>
-</div>
+<button class="button is-small">Pagination</button>

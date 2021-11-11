@@ -1,31 +1,22 @@
-<div class=" my-3">
-<div class="container border rounded my-1">
-<div class="d-flex justify-content-between">
-    <h4> <%= @post[:title]%> by username</h4>
-    <div class="d-flex justify-content-end">
-<span>Comments: <%= @post[:commentsCounter]%></span>
-<span>
-<%= button_to "Like", { controller: "posts", action: "like", data: {post_id: @post.id, user_id: @post.user_id  }} %>
-    <%= @post[:likesCounter]%>
-</span>
+<div class="content">
+  <div class="post-header">
+    <div>
+      <p><%= t('post', id: @post.id) %> <%= t('by', name: @user.name) %></p>
+    </div>
+    <div>
+      <p class="is-size-7"><%= t('comments_counter', count: @post.comments_counter) %>, <%= t('likes_counter', count: @post.likes_counter) %></p>
+    </div>
+  </div>
+  <p class="is-size-7 is-italic"><%= t('posted_on', date: @post.created_at.to_s(:nice_date)) %></p>
+  <div class="post-title-container">
+    <h1 class="title"><%= @post.title %></h1>
+    <% if @liked %>
+      <%= render partial: "unlike_post", post: @post %>
+    <% else %>
+      <%= render partial: "like_post", post: @post %>
+    <% end %>
+  </div>
+  <p><%= @post.text %></p>
 </div>
-</div>
-<p> <%= @post[:text]%> </p>
-        <% if can? :destroy,  @post %>
-          <button>
-            <%= link_to "Delete Post",  posts_destroy_path(@post.user_id), method: :delete, class:"btn btn-outline-danger" %>
-          </button>
-        <%end%>
-</div>
-<div class="container rounder border">
-<% @post.comments.each do |comment| %>
-<p>Username: <%= comment[:text] %></p>
-<p>id: <%= comment.id %></p>
-<% if can? :destroy,  comment %>
-          <button>
-            <%= link_to "Delete comment",  comment_path(comment.id), method: :delete %>
-          </button>
-        <%end%>
-<% end %>
-</div>
-</div>
+<%= render partial: "new_comment", post: @post %>
+<%= render partial: "shared/comment", collection: @comments %>

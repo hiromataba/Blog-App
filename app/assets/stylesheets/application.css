@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://media.istockphoto.com/photos/white-backdrop-for-your-product-studio-floor-background-blank-gray-picture-id873550744?k=20&m=873550744&s=170667a&w=0&h=ek0pFX3yyieWnvdQNPOycAFgK55yBJFwEutxJb49UkI=");
+}
