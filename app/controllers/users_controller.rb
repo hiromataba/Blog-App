@@ -1,10 +1,20 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all.order('created_at')
+    @users = User.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @users }
+    end
   end
 
   def show
     @user = User.find(params[:id])
-    @posts = @user.recent_posts
+    @posts = @user.posts
+
+    respond_to do |format|
+      format.html
+      format.json { render json: { posts: @posts, user: @user } }
+    end
   end
 end
