@@ -1,4 +1,3 @@
-user_show_spec.rb
 require 'rails_helper'
 RSpec.describe 'User view', type: :feature do
   include Devise::Test::IntegrationHelpers
