@@ -59,6 +59,7 @@ end
 gem 'cancancan'
 gem 'devise'
 gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
+gem 'devise-jwt'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'rubocop'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
