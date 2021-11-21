@@ -12,5 +12,13 @@ Rails.application.routes.draw do
   post '/users/:user_id/posts/comment', to: 'comments#create', as: "comments"
   resources :comments, only: [:destroy]
   resources :likes, only: [:destroy]
+
+  namespace :api , defaults: { format: :json } do
+    namespace :v1 do
+      resources :posts, only: [:index] do
+        resources :comments, only: [:index, :create]
+      end
+    end
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

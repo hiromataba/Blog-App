@@ -75,6 +75,12 @@ rspec
 - Twitter: [@twitterhandle](https://twitter.com/MatabaHiro)
 - LinkedIn: [Hiro Mataba](https://www.linkedin.com/in/hiro-mataba-1bb910209/)
 
+👤 **Denis Andrei Diaconu**
+
+- GitHub: [@DenisDiaconu](https://github.com/denisdiaconu)
+- Twitter: [@DenisAndreiDia1](https://twitter.com/DenisAndreiDia1)
+- LinkedIn: [Denis Diaconu](https://www.linkedin.com/in/denis-diaconu-1394091b7/)
+
 
 ## 🤝 Contributing
 
