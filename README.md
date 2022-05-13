@@ -2,7 +2,7 @@
 
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
-> Classic blog website
+> Classic Blog Website
 
 Blog website that shows a list of posts and empower readers to interact with them by adding comments and liking posts.
 
