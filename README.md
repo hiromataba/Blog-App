@@ -16,7 +16,7 @@ Blog website that shows a list of posts and empower readers to interact with the
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### Prerequisite
 
 - [Ruby](https://www.ruby-lang.org/en/)
 - [Rails](https://gorails.com/)
