@@ -14,7 +14,7 @@ Blog website that shows a list of all posts and empower readers to interact with
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+In order to get a local copy up and running follow these simple example steps.
 
 ### Prerequisite
 
