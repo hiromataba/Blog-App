@@ -23,7 +23,7 @@ In order to get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- Make sure you have Ruby on Rails set up properly on your computer
+- Make sure you have Ruby on Rails set up properly on your computer.
 - Clone or download this repo on your machine.
 - Enter the project directory.
 
