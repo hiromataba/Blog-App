@@ -7,7 +7,7 @@
 Blog website that shows a list of all posts and empower readers to interact with them by adding comments and liking posts.
 
 
-## Built With
+## Built With:
 
 - Ruby on Rails
 - PostgreSQL
